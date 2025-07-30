@@ -1,0 +1,30 @@
+/* Container for the banner image and logos */
+.banner-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Left logo position */
+.logo-left {
+  position: absolute;
+  top: 50%;
+  left: 20px; /* Adjust the position as needed */
+  transform: translateY(-50%);
+}
+
+/* Right logo position */
+.logo-right {
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Adjust the position as needed */
+  transform: translateY(-50%);
+}
+
+/* Ensures the image takes full width and height */
+.banner-container img {
+  width: 100%;
+  height: auto;
+}
