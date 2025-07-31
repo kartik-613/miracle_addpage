@@ -102,16 +102,9 @@
       color: #333;
     }
 
-    .right-section li span.icon {
-      color: #1f3c88;
-      margin-right: 8px;
-      font-size: 16px;
-    }
 
-    .round{
-      padding: 3px;
-      background-color: #4982ce;
-    }
+
+
 
     .form-p{
       min-height: 550px;
@@ -187,4 +180,32 @@
   .card {
     flex: 0 0 100% !important; /* Show 1 card at a time on mobile */
   }
+}
+
+
+.kk {
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.kk .icon {
+  margin-right: 10px;
+}
+
+.kk .round {
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  color: #4982ce;
+  border: 2px solid #4982ce;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
 }
