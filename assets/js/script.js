@@ -5,6 +5,13 @@ function logFormData() {
   const city = document.getElementById("form-field-field_91678e6").value;
   const course = document.getElementById("form-field-course").value;
 
+    const button = document.getElementById("submitButton");
+  const buttonText = document.getElementById("buttonText");
+
+    // Disable button and show loader
+  button.disabled = true;
+  buttonText.innerHTML = "⏳ Submitting...";
+
   const htmlTable = `
              <table border="1" cellpadding="5" style="border-collapse: collapse;">
                <tr>
@@ -35,7 +42,7 @@ function logFormData() {
            `;
 
   // Build query parameters
-  const subject = "New Enquiry";
+  const subject = course;
   const text = `Name: ${name}, Mobile Number: ${mobile}, Email: ${email}, City: ${city}, Course: ${course}`;
 
   const apiUrl = `https://hotelapi.shriyanshnath.com/api/SEND_ENQUIRY_MAIL?subject=${subject}&text=${text}`;
@@ -53,5 +60,9 @@ function logFormData() {
     .catch((error) => {
       console.error("Error:", error);
       alert("Error submitting form. Please try again.");
-    });
+    })
+    .finally(()=>{
+      button.disabled = false;
+  buttonText.innerHTML = "Get One-On-One Career Guidance";
+    })
 }
