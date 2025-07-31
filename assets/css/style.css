@@ -120,3 +120,71 @@
         min-height: 4px;
       }
     }
+
+        .carousel-container {
+  position: relative;
+  max-width: 1000px !important;
+  margin: 50px auto !important;
+  overflow: hidden !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+  display: flex !important;
+  transition: transform 0.5s ease-in-out !important;
+  padding: 10px !important;
+}
+
+.card {
+  flex: 0 0 33.33% !important; /* Show 3 cards at a time */
+  box-sizing: border-box !important;
+  padding: 10px !important;
+  /* border: 1px solid red;
+        margin: 10px;
+        border-radius: 10px; */
+}
+
+.card img {
+  width: 100% !important;
+  border-radius: 8px !important;
+  height: 250px !important;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50% !important;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px !important;
+}
+
+.next {
+  right: 10px !important;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 100% !important; /* Show 1 card at a time on mobile */
+  }
+}

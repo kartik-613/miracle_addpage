@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .red-box {
+        width: 100%;
+        height: calc(100vh - 40px); /* 20px top + 20px bottom padding */
+        background-color: rgb(209, 132, 132);
+        /* margin: auto; */
+        border: 1px solid black;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="height: 100vh; width: 100%; background-color: rgb(243, 207, 165)"
+    >
+      <div class="container">
+        <div class="red-box">
+          <div style="display: flex; border-top: 1px solid black">
+            <div style="flex-basis: 10%">
+              <div
+                style="
+                  padding: 20px;
+                  border-left: 1px solid black;
+                  border-bottom: 1px solid black;
+                  display: inline-block;
+                "
+              >
+                <button
+                  style="padding: 10px 30px; border-radius: 10px; border: none"
+                >
+                  Button1
+                </button>
+              </div>
+            </div>
+            <div style="padding: 35px 10px; display: flex; gap: 10px">
+              <div
+                style="
+                  flex: 1;
+                  border-right: 1px solid black;
+                  border-bottom: 1px solid black;
+                  padding: 0 10px 10px 0;
+                "
+              >
+                <p
+                  style="
+                    margin: 0;
+                    border-left: 1px solid black;
+                    padding-left: 10px;
+                  "
+                >
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC, making it over 2000 years old. Richard McClintock,
+                  a Latin professor at Hampden-Sydney College in Virginia,
+                  looked up one of the more obscure Latin words, consectetur,
+                  from a Lorem Ipsum passage, and going through the cites of the
+                  word in classical literature, discovered the undoubtable
+                  source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of
+                  "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                  Evil) by Cicero, written in 45 BC. This book is a treatise on
+                  the theory of ethics, very popular during the Renaissance. The
+                  first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                  comes from a line in section 1.10.32. The standard chunk of
+                  Lorem Ipsum used since the 1500s is reproduced below for those
+                  interested. Sections 1.10.32 and 1.10.33 from "de Finibus
+                  Bonorum et Malorum" by Cicero are also reproduced in their
+                  exact original form, accompanied by English versions from the
+                  1914 translation by H. Rackham.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -8153,7 +8153,7 @@
           </div>
         </div>
       </section>
-      <section
+      <section class="custom-blue-background" style="border-bottom: 1px solid white;" 
         class="elementor-section elementor-top-section elementor-element elementor-element-4243a0d0 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
         data-id="4243a0d0"
         data-element_type="section"
@@ -8571,9 +8571,46 @@
                     Students Success Story
                   </h2>
                 </div>
-				  <div class="elementor-widget-container">
+				  <!-- <div class="elementor-widget-container">
                  <img style="padding-top: 10px; padding-bottom: 10px;" src="assets/images/Achievement.JPG"/>
-                </div>
+                </div> -->
+                    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <!-- Repeat 8 cards -->
+        <div class="card">
+          <img src="assets/images/IMG_4623[1].jpg" alt="1" />
+        </div>
+        <div class="card">
+          <img src="assets/images/Picture 028[1] (1).jpg" alt="2" />
+        </div>
+        <div class="card">
+          <img
+            src="assets/images/WhatsApp Image 2023-08-19 at 11.56.24 AM (9)[1].jpg"
+            alt="3"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="assets/images/WhatsApp Image 2025-01-29 at 16.57.33_7e8d2400.jpg"
+            alt="4"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="assets/images/WhatsApp Image 2025-01-29 at 16.58.22_7a9c3f8a.jpg"
+            alt="5"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="assets/images/WhatsApp Image 2025-01-29 at 16.58.56_2e96b134.jpg"
+            alt="6"
+          />
+        </div>
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
               </div>
             </div>
           </div>
@@ -8601,11 +8638,15 @@
                 data-element_type="widget"
                 data-widget_type="text-editor.default"
               >
+                              <div>
+                  <p style="text-align: center; color: white; font-size: large; padding: 0px;">Address:  Plot No.80, 3rd Floor, Aakriti Complex, Zone-2, M.P. Nagar, Bhopal, M.P.<br><span>  contact: 0755-49-07790, +91 9179001399</span></p>
+                </div>
                 <div class="elementor-widget-container">
                   <p style="text-align: center; color: white;">
-                   This site is not affiliated with or endorsed by Facebook, Inc. Facebook® is a trademark of Facebook, Inc. The results and earnings mentioned are not typical and are not guarantees. Your success depends on your own effort and circumstances. We aim to provide valuable content and strategies that have worked for us and others, but we make no promises. Please review our terms, privacy policy, and disclaimers via the link above. We value transparency and integrity. Thanks for visiting—we hope you find the training helpful
+Miracle Class is an independent educational platform and is not affiliated with Google, Facebook, or any other third-party entity. All trademarks are property of their respective owners. Results mentioned are not typical and may vary based on individual effort; please refer to our Terms, Privacy Policy, and Disclaimer for full details.
                   </p>
                 </div>
+
               </div>
             </div>
           </div>
@@ -8968,7 +9009,37 @@
           !1
         );
     </script>
-    <script></script>
+    <script>
+            const carousel = document.getElementById("carousel");
+      const cards = document.querySelectorAll(".card");
+      const visibleCards = 3;
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        const maxIndex = cards.length - visibleCards;
+        if (index < 0) currentIndex = 0;
+        else if (index > maxIndex) currentIndex = maxIndex;
+        else currentIndex = index;
+
+        const cardWidth = cards[0].offsetWidth;
+        carousel.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
+      }
+
+      function nextSlide() {
+        showSlide(currentIndex + 1);
+      }
+
+      function prevSlide() {
+        showSlide(currentIndex - 1);
+      }
+
+      // Optional: Auto-play
+      setInterval(() => {
+        const maxIndex = cards.length - visibleCards;
+        if (currentIndex >= maxIndex) currentIndex = -1;
+        nextSlide();
+      }, 3000);
+    </script>
 
     <!-- ✅ Load jQuery first -->
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->

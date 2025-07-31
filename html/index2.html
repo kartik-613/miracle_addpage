@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Card Carousel</title>
+    <style>
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <!-- Repeat 8 cards -->
+        <div class="card">
+          <img src="assets/images/IMG_4623[1].jpg" alt="1" />
+        </div>
+        <div class="card">
+          <img src="assets/images/Picture 028[1] (1).jpg" alt="2" />
+        </div>
+        <div class="card">
+          <img
+            src="assets/images/WhatsApp Image 2023-08-19 at 11.56.24 AM (9)[1].jpg"
+            alt="3"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="assets/images/WhatsApp Image 2025-01-29 at 16.57.33_7e8d2400.jpg"
+            alt="4"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="assets/images/WhatsApp Image 2025-01-29 at 16.58.22_7a9c3f8a.jpg"
+            alt="5"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="assets/images/WhatsApp Image 2025-01-29 at 16.58.56_2e96b134.jpg"
+            alt="6"
+          />
+        </div>
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script>
+      const carousel = document.getElementById("carousel");
+      const cards = document.querySelectorAll(".card");
+      const visibleCards = 3;
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        const maxIndex = cards.length - visibleCards;
+        if (index < 0) currentIndex = 0;
+        else if (index > maxIndex) currentIndex = maxIndex;
+        else currentIndex = index;
+
+        const cardWidth = cards[0].offsetWidth;
+        carousel.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
+      }
+
+      function nextSlide() {
+        showSlide(currentIndex + 1);
+      }
+
+      function prevSlide() {
+        showSlide(currentIndex - 1);
+      }
+
+      // Optional: Auto-play
+      setInterval(() => {
+        const maxIndex = cards.length - visibleCards;
+        if (currentIndex >= maxIndex) currentIndex = -1;
+        nextSlide();
+      }, 3000);
+    </script>
+  </body>
+</html>
